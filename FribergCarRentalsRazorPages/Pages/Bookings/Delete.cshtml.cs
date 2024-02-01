@@ -42,6 +42,7 @@ namespace FribergCarRentalsRazorPages.Pages.Bookings
             {
                 return NotFound();
             }
+            Booking.Car.Bookable = true;
             bookingRepo.DeleteBooking(Booking);
             return RedirectToPage("./Index");
         }

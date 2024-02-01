@@ -42,13 +42,16 @@ namespace FribergCarRentalsRazorPages.Pages.Bookings
             }
             Booking.Customer = customerRepo.GetById(SavedInfoHelper.GetLoggedInCustomer());
             Booking.Car = carRepo.GetById(SavedInfoHelper.GetSavedCar());
+            
+            TimeSpan ts = Booking.EndDate - Booking.StartDate;
+            Booking.totalDays = Math.Abs(ts.Days);
             Booking.CostPerDay = Booking.Car.RentPricePerDay;
             Booking.TotalCost = Booking.CostPerDay * Booking.totalDays;
             var car = Booking.Car;
             car.Bookable = false;
             carRepo.EditCar(car);
             bookingRepo.CreateNewBooking(Booking);
-            return RedirectToPage("./Index");
+            return RedirectToPage("/Customers/LoggedIn");
         }
     }
 }

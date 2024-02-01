@@ -1,0 +1,21 @@
+﻿@page
+@model FribergCarRentalsRazorPages.Pages.Admins.LoggedInModel
+
+@{
+    ViewData["Title"] = "LoggedIn";
+}
+
+<h1>Welcome @Html.DisplayFor(model => model.Admin.FirstName) @Html.DisplayFor(model => model.Admin.LastName)!</h1>
+<br />
+<p>Here you have a few options to choose from.</p>
+<br />
+<h4>Look over your account information here</h4>
+<a asp-page="/Admins/Details" asp-route-id="@Model.Admin.Id">Account information</a>
+<br />
+<h4>List all cars</h4>
+<a asp-page="/Cars/Index">List of all cars here</a>
+<br />
+<h4>List all customer accounts</h4>
+<a asp-page="/Customers/Index">List of all customers here</a>
+<h4>List all bookings</h4>
+<a asp-page="/Bookings/index">List of all the bookings here</a>

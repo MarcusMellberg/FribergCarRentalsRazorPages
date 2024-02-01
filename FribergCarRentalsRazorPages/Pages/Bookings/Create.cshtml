@@ -14,19 +14,29 @@
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label typeof="hidden" asp-for="Booking.CostPerDay" class="control-label"></label>
+               @*  <label asp-for="Booking.CostPerDay" class="control-label"></label> *@
                 <input type="hidden" asp-for="Booking.CostPerDay" class="form-control" />
                 <span asp-validation-for="Booking.CostPerDay" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label type="hidden" asp-for="Booking.TotalCost" class="control-label"></label>
+               @*  <label asp-for="Booking.TotalCost" class="control-label"></label> *@
                 <input type="hidden" asp-for="Booking.TotalCost" class="form-control" />
                 <span asp-validation-for="Booking.TotalCost" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Booking.totalDays" class="control-label"></label>
-                <input asp-for="Booking.totalDays" class="form-control" />
+              @*   <label asp-for="Booking.totalDays" class="control-label"></label> *@
+                <input type="hidden" asp-for="Booking.totalDays" class="form-control" />
                 <span asp-validation-for="Booking.totalDays" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Booking.StartDate" class="control-label"></label>
+                <input type="Date" asp-for="Booking.StartDate" class="form-control" />
+                <span asp-validation-for="Booking.StartDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Booking.EndDate" class="control-label"></label>
+                <input type="Date" asp-for="Booking.EndDate" class="form-control" />
+                <span asp-validation-for="Booking.EndDate" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
