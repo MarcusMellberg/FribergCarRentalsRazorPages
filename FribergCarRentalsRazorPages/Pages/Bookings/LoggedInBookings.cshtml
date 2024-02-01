@@ -1,0 +1,62 @@
+﻿@page
+@model FribergCarRentalsRazorPages.Pages.Bookings.LoggedInBookingsModel
+
+@{
+    ViewData["Title"] = "LoggedInBookings";
+}
+
+<h1>Bookings on this account</h1>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Booking[0].Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Booking[0].CostPerDay)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Booking[0].TotalCost)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Booking[0].totalDays)
+            </th>
+            <th>
+               Name of Customer
+            </th>
+            <th>
+                Car
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Booking) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CostPerDay)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalCost)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.totalDays)
+            </td>
+            <td>
+                    @Html.DisplayFor(modelItem => item.Customer.FirstName) @Html.DisplayFor(modelItem => item.Customer.LastName)
+            </td>
+             <td>
+                    @Html.DisplayFor(modelItem => item.Car.Brand) @Html.DisplayFor(modelItem => item.Car.Model)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+<div>
+    <a asp-page="/Customers/LoggedIn">Back to account overview</a>
+</div>

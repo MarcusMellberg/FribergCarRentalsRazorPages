@@ -1,0 +1,48 @@
+﻿@page
+@model FribergCarRentalsRazorPages.Pages.Cars.BookableCarsModel
+
+@{
+    ViewData["Title"] = "BookableCars";
+}
+
+<h1>All the cars we have in</h1>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Cars[0].Brand)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cars[0].Model)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cars[0].RentPricePerDay)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Cars) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Brand)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Model)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RentPricePerDay)
+            </td>
+            <td>
+                <a asp-page="/Cars/LoggedInDetails" asp-route-id="@item.Id">Picture</a> |
+                    <a asp-page="/Bookings/Create" asp-route-id="@item.Id">Book</a>     
+            </td>    
+        </tr>
+}   
+    </tbody>
+</table>
+<div>
+    <a asp-page="/Customers/LoggedIn">Back to account overview</a>
+</div>

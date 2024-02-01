@@ -1,0 +1,47 @@
+﻿@page
+@model FribergCarRentalsRazorPages.Pages.Cars.LoggedInDetailsModel
+
+@{
+    ViewData["Title"] = "LoggedInDetails";
+}
+
+<h1>LoggedInDetails</h1>
+
+<div>
+    <h4>Car</h4>
+    <hr />
+
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Car.Brand)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Car.Brand)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Car.Model)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Car.Model)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Car.RentPricePerDay)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Car.RentPricePerDay)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Car.Bookable)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Car.Bookable)
+        </dd>
+        <dd>
+            <img src=@Html.DisplayFor(model => model.Car.Image) width="40%" height="auto" />
+        </dd>
+    </dl>
+
+</div>
+<div>
+    <a asp-page="/Cars/BookableCars">Back to List</a>
+</div>
