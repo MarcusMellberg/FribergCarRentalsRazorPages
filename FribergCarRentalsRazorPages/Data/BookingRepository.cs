@@ -12,7 +12,9 @@ namespace FribergCarRentalsRazorPages.Data
 
         public IEnumerable<Booking> GetAll()
         {
-            return applicationDbContext.Bookings.OrderBy(x => x.Id);
+            return applicationDbContext.Bookings.OrderBy(x => x.Id)
+                .Include(b => b.Customer)
+                .Include(b => b.Car);
         }
 
         public Booking GetById(int id)

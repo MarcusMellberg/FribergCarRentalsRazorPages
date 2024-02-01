@@ -12,12 +12,16 @@ namespace FribergCarRentalsRazorPages.Pages.Bookings
     public class DetailsModel : PageModel
     {
         private readonly IBooking bookingRepo;
-        public DetailsModel(IBooking bookingRepo)
+        private readonly ICustomer customerRepo;
+        public DetailsModel(IBooking bookingRepo, 
+                            ICustomer customerRepo)
         {
             this.bookingRepo = bookingRepo;
+            this.customerRepo = customerRepo;
         }
-
+        [BindProperty]
         public Booking Booking { get; set; } = default!;
+        public Customer Customer { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int id)
         {
@@ -34,6 +38,7 @@ namespace FribergCarRentalsRazorPages.Pages.Bookings
             else
             {
                 Booking = booking;
+                Customer = Booking.Customer;
             }
             return Page();
         }
