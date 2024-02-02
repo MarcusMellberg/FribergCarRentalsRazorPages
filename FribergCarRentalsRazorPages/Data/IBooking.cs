@@ -8,6 +8,7 @@
         void EditBooking(Booking booking);
         void DeleteBooking(Booking booking);
         IEnumerable<Booking> GetAllLoggedInBookings(int id);
+        IEnumerable<Booking> GetAllBookingsById(int id);
 
     }
 }

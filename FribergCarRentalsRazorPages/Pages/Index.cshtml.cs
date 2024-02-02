@@ -12,15 +12,17 @@ namespace FribergCarRentalsRazorPages.Pages
     public class IndexModel : PageModel
     {
         private readonly ILogger<IndexModel> _logger;
-
-        public IndexModel(ILogger<IndexModel> logger)
+        private readonly ICar carRepo;
+        public IndexModel(ILogger<IndexModel> logger, ICar carRepo)
         {
             _logger = logger;
+            this.carRepo = carRepo;
         }
-
+        [BindProperty]
+        public IList<Car> Car { get; set; } = default!;
         public void OnGet()
         {
-
+            Car = carRepo.GetAll().ToList();
         }
     }
 }

@@ -46,5 +46,12 @@ namespace FribergCarRentalsRazorPages.Data
                 .Include(b => b.Customer)
                 .Include(b => b.Car);
         }
+
+        public IEnumerable<Booking> GetAllBookingsById(int id)
+        {
+            return applicationDbContext.Bookings.Where(b => b.Id == id)
+                .Include(b => b.Customer)
+                .Include(b => b.Car);
+        }
     }
 }

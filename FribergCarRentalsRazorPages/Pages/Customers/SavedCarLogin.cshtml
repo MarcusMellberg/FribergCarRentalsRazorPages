@@ -1,8 +1,7 @@
 ﻿@page
-@model FribergCarRentalsRazorPages.Pages.Customers.LoginModel
-
+@model FribergCarRentalsRazorPages.Pages.Customers.SavedCarLoginModel
 @{
-    ViewData["Title"] = "Login";
+    ViewData["Title"] = "SavedCarLogin";
 }
 
 <h1>Login to your account</h1>
@@ -35,5 +34,8 @@
 </div>
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }
+

@@ -1,15 +1,14 @@
 ﻿@page
-@model FribergCarRentalsRazorPages.Pages.Cars.LoggedInDetailsModel
+@model FribergCarRentalsRazorPages.Pages.Cars.HomeDetailsModel
 
 @{
-    ViewData["Title"] = "LoggedInDetails";
+    ViewData["Title"] = "HomeDetails";
 }
 
 <h1>Car information</h1>
 
 <div>
     <hr />
-
     <dl class="row">
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Car.Brand)
@@ -35,12 +34,15 @@
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Car.Bookable)
         </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Car.Image)
+        </dt>
         <dd>
             <img src=@Html.DisplayFor(model => model.Car.Image) width="40%" height="auto" />
         </dd>
     </dl>
-
 </div>
 <div>
-    <a asp-page="/Cars/BookableCars">Back to List</a>
+    
+    <a asp-page="/Index">Back to Homepage</a>
 </div>

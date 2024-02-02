@@ -27,7 +27,8 @@ namespace FribergCarRentalsRazorPages.Pages.Bookings
                 return NotFound();
             }
 
-            var booking = bookingRepo.GetById(id);
+            List<Booking> bookings = bookingRepo.GetAllBookingsById(id).ToList();
+            var booking = bookings.FirstOrDefault();
             if (booking == null)
             {
                 return NotFound();
@@ -36,12 +37,15 @@ namespace FribergCarRentalsRazorPages.Pages.Bookings
             return Page();
         }
 
-        public async Task<IActionResult> OnPostAsync(int? id)
+        public async Task<IActionResult> OnPostAsync(int id)
         {
             if (id == null)
             {
                 return NotFound();
             }
+            List<Booking> bookings = bookingRepo.GetAllBookingsById(id).ToList();
+            var booking = bookings.FirstOrDefault();
+            Booking = booking;
             Booking.Car.Bookable = true;
             bookingRepo.DeleteBooking(Booking);
             return RedirectToPage("./Index");

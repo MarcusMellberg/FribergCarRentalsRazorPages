@@ -15,25 +15,10 @@
                 @Html.DisplayNameFor(model => model.Booking[0].Id)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Booking[0].CostPerDay)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Booking[0].TotalCost)
-            </th>
-            <th>
                 @Html.DisplayNameFor(model => model.Booking[0].StartDate)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Booking[0].EndDate)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Booking[0].totalDays)
-            </th>
-            <th>
-               Name of Customer
-            </th>
-            <th>
-                Car
             </th>
             <th></th>
         </tr>
@@ -45,25 +30,13 @@
                 @Html.DisplayFor(modelItem => item.Id)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.CostPerDay)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TotalCost)
-            </td>
-            <td>
                 @Html.DisplayFor(modelItem => item.StartDate)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.EndDate)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.totalDays)
-            </td>
-            <td>
-                    @Html.DisplayFor(modelItem => item.Customer.FirstName) @Html.DisplayFor(modelItem => item.Customer.LastName)
-            </td>
-             <td>
-                    @Html.DisplayFor(modelItem => item.Car.Brand) @Html.DisplayFor(modelItem => item.Car.Model)
+                <a asp-page="/Bookings/LoggedInDetails" asp-route-id="@item.Id">Details</a>
             </td>
         </tr>
 }

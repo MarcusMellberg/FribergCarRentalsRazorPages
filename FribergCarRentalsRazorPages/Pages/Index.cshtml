@@ -4,9 +4,51 @@
     ViewData["Title"] = "Home page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
- 
+<div class="center">
+    <h1>Welcome</h1>
+ <br />
+    <table class="table" "center">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Car[0].Brand)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Car[0].Model)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Car[0].RentPricePerDay)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Car[0].Bookable)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Car)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Brand)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Model)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.RentPricePerDay)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Bookable)
+                    </td>
+                    <td>
+                        <a asp-page="/Cars/HomeDetails" asp-route-id="@item.Id">Details</a> |
+                        <a asp-page="/Customers/SavedCarLogin" asp-route-id="@item.Id">Book this car</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
  
  
    @*  <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p> *@

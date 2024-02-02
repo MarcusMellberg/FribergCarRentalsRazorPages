@@ -9,11 +9,11 @@ using FribergCarRentalsRazorPages.Data;
 
 namespace FribergCarRentalsRazorPages.Pages.Bookings
 {
-    public class DetailsModel : PageModel
+    public class LoggedInDetailsModel : PageModel
     {
         private readonly IBooking bookingRepo;
         private readonly ICustomer customerRepo;
-        public DetailsModel(IBooking bookingRepo, 
+        public LoggedInDetailsModel(IBooking bookingRepo,
                             ICustomer customerRepo)
         {
             this.bookingRepo = bookingRepo;

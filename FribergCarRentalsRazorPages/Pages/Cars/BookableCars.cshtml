@@ -37,7 +37,7 @@
             </td>
             <td>
                 <a asp-page="/Cars/LoggedInDetails" asp-route-id="@item.Id">Picture</a> |
-                    <a asp-page="/Bookings/Create" asp-route-id="@item.Id">Book this car</a>     
+                    <a asp-page="/Bookings/CustomerCreate" asp-page-handler="WithCar" asp-route-id="@item.Id">Book this car</a>
             </td>    
         </tr>
 }   
