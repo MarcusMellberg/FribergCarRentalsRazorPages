@@ -5,7 +5,7 @@
     ViewData["Title"] = "LoggedInBookings";
 }
 
-<h1>Bookings on this account</h1>
+<h1 class="center">Bookings on this account</h1>
 
 
 <table class="table">
@@ -36,12 +36,12 @@
                 @Html.DisplayFor(modelItem => item.EndDate)
             </td>
             <td>
-                <a asp-page="/Bookings/LoggedInDetails" asp-route-id="@item.Id">Details</a>
+                    <a asp-page="/Bookings/LoggedInDetails" asp-route-id="@item.Id" class="route-links-table">-Details-</a>
             </td>
         </tr>
 }
     </tbody>
 </table>
-<div>
-    <a asp-page="/Customers/LoggedIn">Back to account overview</a>
+<div class="div-route-links">
+    <a asp-page="/Customers/LoggedIn" class="route-links">-Back to account overview-</a>
 </div>

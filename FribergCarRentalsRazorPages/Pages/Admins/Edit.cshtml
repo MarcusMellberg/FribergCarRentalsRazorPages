@@ -5,44 +5,42 @@
     ViewData["Title"] = "Edit";
 }
 
-<h1>Edit</h1>
+<h1 class="center">Edit account information</h1>
 
-<h4>Admin</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
+<div class="div-center">
+    <div class="div-form-background">
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Admin.Id" />
-            <div class="form-group">
-                <label asp-for="Admin.FirstName" class="control-label"></label>
-                <input asp-for="Admin.FirstName" class="form-control" />
-                <span asp-validation-for="Admin.FirstName" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Admin.LastName" class="control-label"></label>
-                <input asp-for="Admin.LastName" class="form-control" />
-                <span asp-validation-for="Admin.LastName" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Admin.Email" class="control-label"></label>
-                <input asp-for="Admin.Email" class="form-control" />
-                <span asp-validation-for="Admin.Email" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Admin.Password" class="control-label"></label>
-                <input asp-for="Admin.Password" class="form-control" />
-                <span asp-validation-for="Admin.Password" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
-            </div>
+
+            <label asp-for="Admin.FirstName" class="form-label"></label>
+            <input asp-for="Admin.FirstName" class="form-input" />
+            <span asp-validation-for="Admin.FirstName" class="text-danger"></span>
+
+
+            <label asp-for="Admin.LastName" class="form-label"></label>
+            <input asp-for="Admin.LastName" class="form-input" />
+            <span asp-validation-for="Admin.LastName" class="text-danger"></span>
+
+
+            <label asp-for="Admin.Email" class="form-label"></label>
+            <input asp-for="Admin.Email" class="form-input" />
+            <span asp-validation-for="Admin.Email" class="text-danger"></span>
+
+
+            <label asp-for="Admin.Password" class="form-label"></label>
+            <input asp-for="Admin.Password" class="form-input" />
+            <span asp-validation-for="Admin.Password" class="text-danger"></span>
+         
+          
+            <input type="submit" value="Save" class="btn btn-primary" />
+            
         </form>
     </div>
 </div>
 
-<div>
-    <a asp-page="/Admins/LoggedIn">Back to account overview</a>
+<div class="div-route-links">
+    <a asp-page="/Admins/LoggedIn" class="route-links">-Back to account overview-</a>
 </div>
 
 @section Scripts {

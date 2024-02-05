@@ -5,10 +5,9 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Add a new car to the fleet</h1>
+<h1 class="center">Add a new car to the fleet</h1>
 
-<h4>The new car</h4>
-<hr />
+@* <hr />
 <div class="row">
     <div class="col-md-4">
         <form method="post">
@@ -47,6 +46,39 @@
 
 <div>
     <a asp-page="./Index">Back to list</a>
+</div> *@
+
+<div class="div-center">
+    <div class="div-form-background">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <label asp-for="Car.Brand" class="form-label"></label>
+            <input asp-for="Car.Brand" class="form-input" placeholder="Car brand here..." />
+            <span asp-validation-for="Car.Brand" class="text-danger"></span>
+
+            <label asp-for="Car.Model" class="form-label"></label>
+            <input asp-for="Car.Model" class="form-input" placeholder="Car model here..." />
+            <span asp-validation-for="Car.Model" class="text-danger"></span>
+
+            <label asp-for="Car.RentPricePerDay" class="form-label"></label>
+            <input asp-for="Car.RentPricePerDay" class="form-input" placeholder="Rent price per day here..." />
+            <span asp-validation-for="Car.RentPricePerDay" class="text-danger"></span>
+
+            <label asp-for="Car.Image" class="form-label"></label>
+            <input asp-for="Car.Image" class="form-input" placeholder="URL to image here..." />
+            <span asp-validation-for="Car.Image" class="text-danger"></span>
+
+            <label class="form-check-label">
+                @Html.DisplayNameFor(model => model.Car.Bookable) <input class="form-check-input" asp-for="Car.Bookable" />
+            </label>
+
+            <input type="submit" value="Add new car" class="btn btn-primary" />
+        </form>
+    </div>
+    <div class="div-route-links">
+        <a asp-page="./Index" class="route-links">Back to list</a>
+    </div>
 </div>
 
 @section Scripts {

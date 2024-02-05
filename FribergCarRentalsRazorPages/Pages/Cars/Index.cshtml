@@ -5,11 +5,11 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>All the cars in the fleet</h1>
+<h1 class="center">All the cars in the fleet</h1>
 
-<p>
-    <a asp-page="Create">Add new car to the fleet</a>
-</p>
+<div class="div-route-links-top-table">
+    <a asp-page="Create" class="route-links">-Add new car to the fleet-</a>
+</div>
 <table class="table">
     <thead>
         <tr>
@@ -44,12 +44,14 @@
                 @Html.DisplayFor(modelItem => item.Bookable)
             </td>
             <td>
-                <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+                <a asp-page="./Edit" asp-route-id="@item.Id" class="route-links-table">-Edit-</a>
+                <a asp-page="./Details" asp-route-id="@item.Id" class="route-links-table">-Details-</a>
+                <a asp-page="./Delete" asp-route-id="@item.Id" class="route-links-table">-Delete-</a>
             </td>
         </tr>
 }
     </tbody>
 </table>
-<a asp-page="/Admins/LoggedIn">Back to account overview</a>
+<div class="div-route-links">
+<a asp-page="/Admins/LoggedIn" class="route-links">-Back to account overview-</a>
+</div>

@@ -27,6 +27,28 @@ body {
     background-color: #dae4e6
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-family: sans-serif;
+}
+
+h1 {
+    font-size: xx-large;
+}
+
+h2 {
+    font-size: larger;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: large;
+}
+
+h4 {
+    font-size: medium;
+    font-weight: bold;
+}
+
 .image {
     padding: 1em;
 }
@@ -75,7 +97,9 @@ table {
     margin-right: auto;
     width: 60%;
     border-spacing: 1px;
-    
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .table tr:nth-child(odd) {
@@ -116,3 +140,205 @@ td {
     padding: 0.5em;
     /*padding-bottom: 0em;*/
 }
+
+
+.form-input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 100%;
+    /*background-color: #0caf42;*/
+    background-color: #0ba83f;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+    input[type=submit]:hover {
+        background-color: #08712a;
+    }
+
+.form-label {
+    font-family: sans-serif;
+    font-weight: bold;
+    display: flex;
+}
+
+.div-form-background {
+    width: auto;
+    border-radius: 5px;
+    border: 2px solid #df540f;
+    background-color: #b4bec7;
+    padding: 30px;
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+.div-list-background-booking {
+    width: auto;
+    border-radius: 5px;
+    border: 2px solid #df540f;
+    background-color: #b4bec7;
+    padding: 30px;
+    padding-left: 50px;
+    padding-right: 0px;
+}
+
+.div-list-background-car {
+    width: auto;
+    border-radius: 5px;
+    border: 2px solid #df540f;
+    background-color: #b4bec7;
+    padding: 30px;
+    padding-left: 50px;
+    padding-right: 0px;
+}
+
+
+.div-center {
+    margin: auto;
+    width: 30%;
+}
+
+.div-center-list-booking {
+    margin: auto;
+    width: 25%;
+}
+
+.div-center-list-car {
+    margin: auto;
+    width: 35%;
+}
+
+.div-route-links {
+    text-align: center;
+    margin-top: 5px;
+}
+
+.div-route-links-top-table {
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    align-content: flex-start;
+    margin-bottom: 5px;
+}
+
+.route-links {
+    font-family: sans-serif;
+    font-size: medium;
+    font-weight: 600;
+    color: #095b83;
+}
+
+.route-links-table {
+    font-family: sans-serif;
+    font-size: medium;
+    font-weight: 600;
+    color: #095b83;
+    margin-left: 15px;
+}
+
+.route-links:hover {
+     background-color: #b4bec7;
+     color: #05344c;
+ }
+
+.route-links-table:hover {
+    background-color: #b4bec7;
+    color: #05344c;
+}
+
+.form-check-input {
+    width: 1.5em;
+    height: 1.5em;
+    margin-top: 0;
+    margin-left: 1em;
+    vertical-align: top;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    border: 1px solid #df540f;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -webkit-print-color-adjust: exact;
+    color-adjust: exact;
+}
+
+.form-check-input[type=checkbox] {
+    border-radius: 0.25em;
+}
+
+.form-check-input:checked {
+    background-color: #df540f;
+    border-color: #df540f;
+}
+
+.form-check-input:focus {
+   border-color: #df540f;
+   outline: 0;
+    box-shadow: 0 0 0 0.15rem #fdc53e;
+}
+
+.form-check-label {
+    font-family: sans-serif;
+    font-weight: bold;
+    display: flex;
+    margin-top: 1em;
+    margin-bottom:0.5em;
+}
+
+dl {
+    width: 100%;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+}
+
+dt {
+    float: left;
+    width: 40%;
+    height: 40px;
+    padding: 0;
+    margin: 0;  
+}
+
+dd {
+    float: left;
+    width: 60%;
+    height: 40px;
+    padding: 0;
+    margin: 0;
+}
+
+.list-label {
+    font-family: sans-serif;
+    font-size: larger;
+    font-weight: 700;
+}
+
+.list-data {
+    font-family: sans-serif;
+    font-size: large;
+    font-weight: 500;
+}
+
+/*.col-sm-10 {
+    flex: 0 0 auto;
+    width: 83.33333333%;
+    font-size: medium;
+}*/
+  
