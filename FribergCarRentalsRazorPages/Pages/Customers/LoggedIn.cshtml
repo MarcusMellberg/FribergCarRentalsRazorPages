@@ -5,16 +5,29 @@
     ViewData["Title"] = "LoggedIn";
 }
 
-<h1>Welcome @Html.DisplayFor(model => model.Customer.FirstName) @Html.DisplayFor(model => model.Customer.LastName)!</h1>
+<h1 class="center">Welcome @Html.DisplayFor(model => model.Customer.FirstName) @Html.DisplayFor(model => model.Customer.LastName)!</h1>
 <br />
-<p>Here you have a few options to choose from.</p>
-<br />
-<h4>Look over your account information here</h4>
-<a asp-page="/Customers/LoggedInDetails" asp-route-id="@Model.Customer.Id">Account information</a>
-<br />
-<h4>Book a car here</h4>
-<a asp-page="/Cars/BookableCars" >List of all the cars we have in right now</a>
-<br />
-<h4>List all your current bookings</h4>
-<a asp-page="/Bookings/LoggedInBookings">List of all the bookings you have</a>
 
+
+<div id="wrapper" class=" div-center">
+    <div id="div1" class="div-account-background">
+        <h2>Account information</h2>
+        <p>Here you find all the information about the account. You can edit and save changes to the account. For example change your password.</p>
+        <br />
+        <br />
+        <a asp-page="/Customers/LoggedInDetails" class="route-links" asp-route-id="@Model.Customer.Id">-Account information-</a>
+    </div>
+    <div id="div1" class="div-account-background">
+        <h2>Book a car</h2>
+        <p>Here you can book a car. This will list all the cars thats available in this moment. It will not include cars that are already booked.</p>
+        <br />
+        <br />
+        <a asp-page="/Cars/BookableCars" class="route-links">-List cars-</a>
+    </div>
+    <div id="div1" class="div-account-background">
+        <h2>Your bookings</h2>
+        <p>Here you can see all the informations about your bookings. You can see details about the bookings and even edit them. For example change the date.</p>
+        <br />
+        <a asp-page="/Bookings/LoggedInBookings" class="route-links">-List bookings-</a>
+    </div>
+</div>

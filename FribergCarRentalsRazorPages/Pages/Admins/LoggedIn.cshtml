@@ -5,17 +5,38 @@
     ViewData["Title"] = "LoggedIn";
 }
 
-<h1>Welcome @Html.DisplayFor(model => model.Admin.FirstName) @Html.DisplayFor(model => model.Admin.LastName)!</h1>
-<br />
-<p>Here you have a few options to choose from.</p>
-<br />
-<h4>Look over your account information here</h4>
-<a asp-page="/Admins/Details" asp-route-id="@Model.Admin.Id">Account information</a>
-<br />
-<h4>List all cars</h4>
-<a asp-page="/Cars/Index">List of all cars here</a>
-<br />
-<h4>List all customer accounts</h4>
-<a asp-page="/Customers/Index">List of all customers here</a>
-<h4>List all bookings</h4>
-<a asp-page="/Bookings/index">List of all the bookings here</a>
+<h1 class="center">Welcome @Html.DisplayFor(model => model.Admin.FirstName) @Html.DisplayFor(model => model.Admin.LastName)!</h1>
+
+
+<div id="wrapper" class="div-center">
+    <div id="div1" class="div-account-background">
+        <h2>Account information</h2>
+        <p>Here you find all the information about the account. You can edit and save changes to the account. For example change your password.</p>
+        <br />
+        <br />
+        <a asp-page="/Admins/Details" asp-route-id="@Model.Admin.Id" class="route-links">-Account information-</a>
+    </div>
+    <div id="div1" class="div-account-background">
+        <h2>List cars</h2>
+        <p>Here you will get a overview of all the cars in the fleet. You will get the options to add new, edit, see details and delete a car from the system.</p>
+        <br />
+        <br />
+        <a asp-page="/Cars/Index" class="route-links">-List cars-</a>
+    </div>
+</div>
+<div id="wrapper" class="div-center">
+    <div id="div1" class="div-account-background">
+        <h2>List customer accounts</h2>
+        <p>Here you will get a overview of all the registered customers. You will get the options to add new, edit, see details and delete a customer from the system.</p>
+        <br />
+        <br />
+        <a asp-page="/Customers/Index" class="route-links">-List customers-</a>
+    </div>
+    <div id="div1" class="div-account-background">
+        <h2>List bookings</h2>
+        <p>Here you will get a overview of all the bookings in the system. You will get the options to add new, edit, see details and delete a booking from the system.</p>
+        <br />
+        <br />
+        <a asp-page="/Bookings/index" class="route-links">-List bookings-</a>
+    </div>
+</div>

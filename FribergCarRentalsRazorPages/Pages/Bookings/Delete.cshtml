@@ -5,66 +5,70 @@
     ViewData["Title"] = "Delete";
 }
 
-<h1>Remove a booking from the system</h1>
+<h1 class="center">Remove a booking from the system</h1>
 
-<h3>Are you sure you want to delete this?</h3>
-<div>
-    <h4>Booking</h4>
-    <hr />
-    <dl class="row">
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Booking.Id)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Booking.Id)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Booking.CostPerDay)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Booking.CostPerDay)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Booking.TotalCost)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Booking.TotalCost)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Booking.StartDate)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Booking.StartDate)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Booking.EndDate)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Booking.EndDate)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Booking.totalDays)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Booking.totalDays)
-        </dd>
-        <dt class="col-sm-2">
-            Customer
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Booking.Customer.FirstName) @Html.DisplayFor(model => model.Booking.Customer.LastName)
-        </dd>
-        <dt class="col-sm-2">
-            Car
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Booking.Car.Brand) @Html.DisplayFor(model => model.Booking.Car.Model)
-        </dd>
-    </dl>
-    
-    <form method="post">
-        <input type="hidden" asp-for="Booking.Id" />
-        <input type="submit" value="Delete" class="btn btn-danger" /> |
-        <a asp-page="./Index">Back to List</a>
-    </form>
+<div class="div-center-list-booking">
+    <div class="div-list-background-booking">
+        <dl class="row">
+            <dt class="list-label">
+                @Html.DisplayNameFor(model => model.Booking.Id)
+            </dt>
+            <dd class="list-data">
+                @Html.DisplayFor(model => model.Booking.Id)
+            </dd>
+            <dt class="list-label">
+                @Html.DisplayNameFor(model => model.Booking.CostPerDay)
+            </dt>
+            <dd class="list-data">
+                @Html.DisplayFor(model => model.Booking.CostPerDay)
+            </dd>
+            <dt class="list-label">
+                @Html.DisplayNameFor(model => model.Booking.TotalCost)
+            </dt>
+            <dd class="list-data">
+                @Html.DisplayFor(model => model.Booking.TotalCost)
+            </dd>
+            <dt class="list-label">
+                @Html.DisplayNameFor(model => model.Booking.StartDate)
+            </dt>
+            <dd class="list-data">
+                @Html.DisplayFor(model => model.Booking.StartDate)
+            </dd>
+            <dt class="list-label">
+                @Html.DisplayNameFor(model => model.Booking.EndDate)
+            </dt>
+            <dd class="list-data">
+                @Html.DisplayFor(model => model.Booking.EndDate)
+            </dd>
+            <dt class="list-label">
+                @Html.DisplayNameFor(model => model.Booking.totalDays)
+            </dt>
+            <dd class="list-data">
+                @Html.DisplayFor(model => model.Booking.totalDays)
+            </dd>
+            <dt class="list-label">
+                Customer
+            </dt>
+            <dd class="list-data">
+                @Html.DisplayFor(model => model.Booking.Customer.FirstName) @Html.DisplayFor(model => model.Booking.Customer.LastName)
+            </dd>
+            <dt class="list-label">
+                Car
+            </dt>
+            <dd class="list-data">
+                @Html.DisplayFor(model => model.Booking.Car.Brand) @Html.DisplayFor(model => model.Booking.Car.Model)
+            </dd>
+        </dl>
+        <div class="center-submit-del">
+            <form method="post">
+                <input type="hidden" asp-for="Booking.Id" />
+                <input type="submit-del" value="Delete" class="btn btn-danger" />
+            </form>
+        </div>
+       
+        
+    </div>
+</div>
+<div class="div-route-links">
+<a asp-page="./Index" class="route-links">-Back to List-</a>
 </div>
