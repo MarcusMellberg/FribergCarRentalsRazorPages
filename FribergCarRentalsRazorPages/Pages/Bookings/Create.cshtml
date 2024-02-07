@@ -5,37 +5,35 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Create a new booking</h1>
+<h1 class="center">Create a new booking</h1>
 
-<h4>Booking</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
+<div class="div-center">
+    <div class="div-form-background">
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-               @*  <label asp-for="Booking.CostPerDay" class="control-label"></label> *@
+                @*  <label asp-for="Booking.CostPerDay" class="control-label"></label> *@
                 <input type="hidden" asp-for="Booking.CostPerDay" class="form-control" />
                 <span asp-validation-for="Booking.CostPerDay" class="text-danger"></span>
             </div>
             <div class="form-group">
-               @*  <label asp-for="Booking.TotalCost" class="control-label"></label> *@
+                @*  <label asp-for="Booking.TotalCost" class="control-label"></label> *@
                 <input type="hidden" asp-for="Booking.TotalCost" class="form-control" />
                 <span asp-validation-for="Booking.TotalCost" class="text-danger"></span>
             </div>
             <div class="form-group">
-              @*   <label asp-for="Booking.totalDays" class="control-label"></label> *@
+                @*   <label asp-for="Booking.totalDays" class="control-label"></label> *@
                 <input type="hidden" asp-for="Booking.totalDays" class="form-control" />
                 <span asp-validation-for="Booking.totalDays" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Booking.StartDate" class="control-label"></label>
-                <input type="Date" asp-for="Booking.StartDate" class="form-control" />
+                <label asp-for="Booking.StartDate" class="form-label"></label>
+                <input type="Date" asp-for="Booking.StartDate" class="form-input" />
                 <span asp-validation-for="Booking.StartDate" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Booking.EndDate" class="control-label"></label>
-                <input type="Date" asp-for="Booking.EndDate" class="form-control" />
+                <label asp-for="Booking.EndDate" class="form-label"></label>
+                <input type="Date" asp-for="Booking.EndDate" class="form-input" />
                 <span asp-validation-for="Booking.EndDate" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -45,8 +43,8 @@
     </div>
 </div>
 
-<div>
-    <a asp-page="Index">Back to List</a>
+<div class="div-route-links">
+    <a asp-page="Index" class="route-links">-Back to List-</a>
 </div>
 
 @section Scripts {

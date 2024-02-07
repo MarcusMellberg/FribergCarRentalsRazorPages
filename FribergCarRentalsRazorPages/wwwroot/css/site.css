@@ -220,8 +220,6 @@ td {
     border: 2px solid #df540f;
     background-color: #b4bec7;
     padding: 10px;
-    /*padding-left: 80px;
-    padding-right: 80px;*/
 }
 
 .div-list-background-booking {
@@ -387,4 +385,8 @@ dd {
     margin: 10px;
 }
 
-  
+.text-danger {
+    --bs-text-opacity: 1;
+    /*color: rgba(var(--bs-danger-rgb), var(--bs-text-opacity)) !important;*/
+    color: #df0f32;
+}
