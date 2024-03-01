@@ -36,12 +36,21 @@ namespace FribergCarRentalsRazorPages.Pages.Customers
                 var email = Customer.Email;
                 var password = Customer.Password;
                 var customers = customerRepo.GetLoggedInCustomer(email, password);
+
                 foreach (var customer in customers)
                 {
-                    int id = customer.Id;
-                    SavedInfoHelper.SetLoggedInCustomer(id);
+                    if (customer == null)
+                    {
+                        return NotFound();
+                    }
+                    else
+                    {
+                        int id = customer.Id;
+                        SavedInfoHelper.SetLoggedInCustomer(id);
+                        return RedirectToPage("/Customers/LoggedIn");
+                    }
                 }
-                return RedirectToPage("/Customers/LoggedIn");
+            return RedirectToPage("/Customers/Login");
 
         }
     }

@@ -7,7 +7,7 @@
 <div class="center">
     <h1>Welcome</h1>
  <br />
-    <table class="table" "center">
+    <table class="table">
         <thead>
             <tr>
                 <th>
@@ -42,8 +42,8 @@
                         @Html.DisplayFor(modelItem => item.Bookable)
                     </td>
                     <td>
-                        <a asp-page="/Cars/HomeDetails" asp-route-id="@item.Id">Details</a> |
-                        <a asp-page="/Customers/SavedCarLogin" asp-route-id="@item.Id">Book this car</a>
+                        <a asp-page="/Cars/HomeDetails" asp-route-id="@item.Id" class="route-links-table">-Details-</a> |
+                        <a asp-page="/Customers/SavedCarLogin" asp-route-id="@item.Id" class="route-links">-Book this car-</a>
                     </td>
                 </tr>
             }

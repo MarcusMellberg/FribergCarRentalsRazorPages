@@ -5,32 +5,31 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Create</h1>
+<h1 class="center">Register a new admin account</h1>
 
-<h4>Admin</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
+
+<div class="div-center">
+    <div class="div-form-background">
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="Admin.FirstName" class="control-label"></label>
-                <input asp-for="Admin.FirstName" class="form-control" />
+                <label asp-for="Admin.FirstName" class="form-label"></label>
+                <input asp-for="Admin.FirstName" class="form-input" />
                 <span asp-validation-for="Admin.FirstName" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Admin.LastName" class="control-label"></label>
-                <input asp-for="Admin.LastName" class="form-control" />
+                <label asp-for="Admin.LastName" class="form-label"></label>
+                <input asp-for="Admin.LastName" class="form-input" />
                 <span asp-validation-for="Admin.LastName" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Admin.Email" class="control-label"></label>
-                <input asp-for="Admin.Email" class="form-control" />
+                <label asp-for="Admin.Email" class="form-label"></label>
+                <input asp-for="Admin.Email" class="form-input" />
                 <span asp-validation-for="Admin.Email" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Admin.Password" class="control-label"></label>
-                <input asp-for="Admin.Password" class="form-control" />
+                <label asp-for="Admin.Password" class="form-label"></label>
+                <input asp-for="Admin.Password" class="form-input" />
                 <span asp-validation-for="Admin.Password" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -40,8 +39,8 @@
     </div>
 </div>
 
-<div>
-    <a asp-page="Index">Back to List</a>
+<div class="div-route-links">
+    <a asp-page="Index" class="route-links">-Back to List-</a>
 </div>
 
 @section Scripts {

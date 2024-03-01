@@ -5,33 +5,25 @@
     ViewData["Title"] = "Login";
 }
 
-<h1>Login</h1>
+<h1 class="center">Login to your admin account</h1>
 
-<h4>Admin</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
+<div class="div-center">
+    <div class="div-form-background">
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Admin.Email" class="control-label"></label>
-                <input asp-for="Admin.Email" class="form-control" />
-                <span asp-validation-for="Admin.Email" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Admin.Password" class="control-label"></label>
-                <input asp-for="Admin.Password" class="form-control" />
-                <span asp-validation-for="Admin.Password" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Login" class="btn btn-primary" />
-            </div>
+            <label asp-for="Admin.Email" class="form-label"></label>
+            <input asp-for="Admin.Email" class="form-input" placeholder="Your Email here..." />
+            <span asp-validation-for="Admin.Email" class="text-danger"></span>
+            <label asp-for="Admin.Password" class="form-label"></label>
+            <input asp-for="Admin.Password" class="form-input" placeholder="Your Password here..." />
+            <span asp-validation-for="Admin.Password" class="text-danger"></span>
+
+            <input type="submit" value="Login" class="input-positive" />
         </form>
     </div>
-</div>
-
-<div>
-    <a asp-page="/Index">Back to homepage</a>
+    <div class="div-route-links">
+        <a asp-page="/Index" class="route-links">-Back to homepage-</a>
+    </div>
 </div>
 
 @section Scripts {

@@ -5,7 +5,7 @@
     ViewData["Title"] = "BookableCars";
 }
 
-<h1>All the cars we have available</h1>
+<h1 class="center">All the cars we have available</h1>
 
 
 <table class="table">
@@ -36,13 +36,13 @@
                 @Html.DisplayFor(modelItem => item.RentPricePerDay)
             </td>
             <td>
-                <a asp-page="/Cars/LoggedInDetails" asp-route-id="@item.Id">Picture</a> |
-                    <a asp-page="/Bookings/CustomerCreate" asp-page-handler="WithCar" asp-route-id="@item.Id">Book this car</a>
+                    <a asp-page="/Cars/LoggedInDetails" asp-route-id="@item.Id" class="route-links-table">-Details-</a> |
+                    <a asp-page="/Bookings/CustomerCreate" asp-page-handler="WithCar" asp-route-id="@item.Id" class="route-links-table">-Book this car-</a>
             </td>    
         </tr>
 }   
     </tbody>
 </table>
-<div>
-    <a asp-page="/Customers/LoggedIn">Back to account overview</a>
+<div class="div-route-links">
+    <a asp-page="/Customers/LoggedIn" class="route-links">-Back to account overview-</a>
 </div>

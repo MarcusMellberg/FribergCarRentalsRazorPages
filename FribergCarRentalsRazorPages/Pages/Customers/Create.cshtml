@@ -5,43 +5,37 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Register a new customer account</h1>
+<h1 class="center">Register a new customer account</h1>
 
-<h4>Customer account</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
+<div class="div-center">
+    <div class="div-form-background">
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Customer.FirstName" class="control-label"></label>
-                <input asp-for="Customer.FirstName" class="form-control" />
-                <span asp-validation-for="Customer.FirstName" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Customer.LastName" class="control-label"></label>
-                <input asp-for="Customer.LastName" class="form-control" />
-                <span asp-validation-for="Customer.LastName" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Customer.Email" class="control-label"></label>
-                <input asp-for="Customer.Email" class="form-control" />
-                <span asp-validation-for="Customer.Email" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Customer.Password" class="control-label"></label>
-                <input asp-for="Customer.Password" class="form-control" />
-                <span asp-validation-for="Customer.Password" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
-            </div>
+
+            <label asp-for="Customer.FirstName" class="form-label"></label>
+            <input asp-for="Customer.FirstName" class="form-input" placeholder="Your firstname here..." />
+            <span asp-validation-for="Customer.FirstName" class="text-danger"></span>
+
+
+            <label asp-for="Customer.LastName" class="form-label"></label>
+            <input asp-for="Customer.LastName" class="form-input" placeholder="Your lastname here..." />
+            <span asp-validation-for="Customer.LastName" class="text-danger"></span>
+
+            <label asp-for="Customer.Email" class="form-label"></label>
+            <input asp-for="Customer.Email" class="form-input" placeholder="Your Email here..." />
+            <span asp-validation-for="Customer.Email" class="text-danger"></span>
+
+            <label asp-for="Customer.Password" class="form-label"></label>
+            <input asp-for="Customer.Password" class="form-input" placeholder="Choose a password here..." />
+            <span asp-validation-for="Customer.Password" class="text-danger"></span>
+
+
+            <input type="submit" value="Register new account" class="input-positive" />
         </form>
     </div>
 </div>
-
-<div>
-    <a asp-page="/Index">Back to homepage</a>
+<div class="div-route-links">
+    <a asp-page="/Index" class="route-links">-Back to homepage-</a>
 </div>
 
 @section Scripts {

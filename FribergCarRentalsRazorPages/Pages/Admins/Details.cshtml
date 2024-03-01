@@ -5,39 +5,40 @@
     ViewData["Title"] = "Details";
 }
 
-<h1>Account Information</h1>
+<h1 class="center">Account Information</h1>
 
-<div>
-    <h4>Admin account</h4>
-    <hr />
-    <dl class="row">
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Admin.FirstName)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Admin.FirstName)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Admin.LastName)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Admin.LastName)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Admin.Email)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Admin.Email)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Admin.Password)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Admin.Password)
-        </dd>
-    </dl>
+<div class="div-center-list-booking">
+    <div class="div-list-background-booking">
+
+        <dl>
+            <dt class="list-label">
+                @Html.DisplayNameFor(model => model.Admin.FirstName)
+            </dt>
+            <dd class="list-data">
+                @Html.DisplayFor(model => model.Admin.FirstName)
+            </dd>
+            <dt class="list-label">
+                @Html.DisplayNameFor(model => model.Admin.LastName)
+            </dt>
+            <dd class="list-data">
+                @Html.DisplayFor(model => model.Admin.LastName)
+            </dd>
+            <dt class="list-label">
+                @Html.DisplayNameFor(model => model.Admin.Email)
+            </dt>
+            <dd class="list-data">
+                @Html.DisplayFor(model => model.Admin.Email)
+            </dd>
+            <dt class="list-label">
+                @Html.DisplayNameFor(model => model.Admin.Password)
+            </dt>
+            <dd class="list-data">
+                @Html.DisplayFor(model => model.Admin.Password)
+            </dd>
+        </dl>
+    </div>
 </div>
-<div>
-    <a asp-page="./Edit" asp-route-id="@Model.Admin.Id">Edit</a> |
-    <a asp-page="/Admins/LoggedIn">Back to account overview</a>
+<div class="div-route-links">
+    <a asp-page="./Edit" asp-route-id="@Model.Admin.Id" class="route-links">-Edit-</a> |
+    <a asp-page="/Admins/LoggedIn" class="route-links">-Back to account overview-</a>
 </div>

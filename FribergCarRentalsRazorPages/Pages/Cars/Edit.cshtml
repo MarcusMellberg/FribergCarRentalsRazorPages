@@ -5,49 +5,48 @@
     ViewData["Title"] = "Edit";
 }
 
-<h1>Edit the car information saved in system</h1>
+<h1 class="center">Edit the car information saved in system</h1>
 
-<h4>Car</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
+
+<div class="div-center">
+    <div class="div-form-background">
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Car.Id" />
-            <div class="form-group">
-                <label asp-for="Car.Brand" class="control-label"></label>
-                <input asp-for="Car.Brand" class="form-control" />
+            
+                <label asp-for="Car.Brand" class="form-label"></label>
+                <input asp-for="Car.Brand" class="form-input" />
                 <span asp-validation-for="Car.Brand" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Car.Model" class="control-label"></label>
-                <input asp-for="Car.Model" class="form-control" />
+            
+          
+                <label asp-for="Car.Model" class="form-label"></label>
+                <input asp-for="Car.Model" class="form-input" />
                 <span asp-validation-for="Car.Model" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Car.RentPricePerDay" class="control-label"></label>
-                <input asp-for="Car.RentPricePerDay" class="form-control" />
+        
+           
+                <label asp-for="Car.RentPricePerDay" class="form-label"></label>
+                <input asp-for="Car.RentPricePerDay" class="form-input" />
                 <span asp-validation-for="Car.RentPricePerDay" class="text-danger"></span>
-            </div>
-            <div class="form-group form-check">
+       
+           
                 <label class="form-check-label">
                     <input class="form-check-input" asp-for="Car.Bookable" /> @Html.DisplayNameFor(model => model.Car.Bookable)
                 </label>
-            </div>
-            <div class="form-group">
-                <label asp-for="Car.Image" class="control-label"></label>
-                <input asp-for="Car.Image" class="form-control" />
+         
+           
+                <label asp-for="Car.Image" class="form-label"></label>
+                <input asp-for="Car.Image" class="form-input" />
                 <span asp-validation-for="Car.Image" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
-            </div>
+
+
+            <input type="submit" value="Save" class="input-positive" />
+           
         </form>
     </div>
 </div>
 
-<div>
-    <a asp-page="./Index">Back to List</a>
+<div class="div-route-links">
+    <a asp-page="./Index" class="route-links">-Back to List-</a>
 </div>
 
 @section Scripts {

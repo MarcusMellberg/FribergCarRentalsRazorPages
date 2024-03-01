@@ -39,10 +39,18 @@ namespace FribergCarRentalsRazorPages.Pages.Admins
             var admins = adminRepo.GetLoggedInAdmin(email, password);
             foreach (var admin in admins)
             {
-                int id = admin.Id;
-                SavedInfoHelper.SetLoggedInAdmin(id);
+                if (admin == null)
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    int id = admin.Id;
+                    SavedInfoHelper.SetLoggedInAdmin(id);
+                    return RedirectToPage("/Admins/LoggedIn");
+                }
             }
-            return RedirectToPage("/Admins/LoggedIn");
+        return RedirectToPage("/Admins/Login");
         }
     }
 }
